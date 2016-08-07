@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+$LOAD_PATH.unshift File.expand_path('./lib')
+require 'number_to_words'
+
+100.upto(100_000_000).to_a.sample(1000).each do |n|
+  STDOUT.puts "#{n}: #{NumberToWords.call(n)}"
+end
