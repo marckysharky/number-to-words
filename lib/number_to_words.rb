@@ -80,7 +80,8 @@ module NumberToWords
     return if sv.empty?
 
     sv.map { |k,v| "#{v} #{k}".strip }
-      .join(' ').strip
+      .join(' ')
+      .strip
   end
 
   def self.call(n)
